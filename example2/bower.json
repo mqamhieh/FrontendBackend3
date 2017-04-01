@@ -1,0 +1,22 @@
+{
+  "name": "FB3 Example 2",
+  "homepage": "https://github.com/mqamhieh/FrontendBackend3",
+  "authors": [
+    "Mohamed Qamhieh <qamhieh@harri.com>"
+  ],
+  "description": "FB3 Example 2",
+  "main": "index.html",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "underscore": "^1.8.3"
+  }
+}
