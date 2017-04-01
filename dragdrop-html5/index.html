@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="jquery.min.js"></script>
+
+    <script type="text/javascript">
+        var allowDrop = function (event) {
+            event.preventDefault();
+        };
+
+        var drop = function (event) {
+
+            event.preventDefault();
+            var itemId = event.dataTransfer.getData("item_id");
+
+            if (itemId) {
+                $(event.target).append($("#" + itemId));
+            }
+            else if (event.dataTransfer.files[0]) {
+                var file = event.dataTransfer.files[0];
+
+                console.log(file.type);
+
+                if (file.type.indexOf("text") === 0) {
+                    var fr = new FileReader();
+
+                    fr.onload = function () {
+                        var elm = $("<div class='item'></div>");
+                        elm.text(fr.result);
+                        $(event.target).append(elm);
+                    };
+
+                    fr.readAsText(file);
+                }
+                else if (file.type.indexOf("image") === 0) {
+                    var fr = new FileReader();
+
+                    fr.onload = function () {
+                        var elm = $("<div class='item'></div>");
+                        elm.css("background-image", "url(" + fr.result + ")");
+                        $(event.target).append(elm);
+
+                        var image = new Image();
+                        var canvas = document.getElementById("myCanvas");
+                        var ctx = canvas.getContext("2d");
+
+
+                        image.onload = function () {
+                            var targetW = canvas.width;
+                            var targetH = canvas.height;
+                            var imageW = image.width;
+                            var imageH = image.height;
+
+                            var factorW = targetW / imageW;
+                            var factorH = targetH / imageH;
+                            var factor = (targetW > targetH)? factorW: factorH;
+                            var newWidth = (factor < 1)? parseInt(factor * imageW): imageW;
+                            var newHeight = (factor < 1)? parseInt(factor * imageH): imageH;
+                            var offsetX = (targetW - newWidth) / 2;
+                            var offsetY = (targetH - newHeight) / 2;
+
+                            ctx.drawImage(image, offsetX, offsetY, newWidth, newHeight);
+                        };
+
+                        // image.src = fr.result;
+                    };
+
+                    fr.readAsDataURL(file);
+                }
+
+            }
+        };
+
+        var dragStart = function (event) {
+            var id = Date.now();
+            $(event.target).attr("id", id);
+            event.dataTransfer.setData("item_id", id);
+        };
+
+    </script>
+    <style>
+        .items {
+            float: left;
+        }
+
+        .item {
+            float: left;
+            width: 100px;
+            height: 100px;
+            background: red;
+            font-size: 12px;
+            background-size: cover;
+            background-position: center center;
+        }
+
+        .item.being-dragged {
+            opacity: 0.8;
+            z-index: 999;
+        }
+
+        .drop-area {
+            float: left;
+            width: 600px;
+            height: 100px;
+            background: grey;
+        }
+    </style>
+</head>
+<body>
+<div class="items">
+    <div class="item"
+         draggable="true"
+         ondragstart="dragStart(event)"
+         style="background: red;"></div>
+    <div class="item"
+         draggable="true"
+         ondragstart="dragStart(event)"
+         style="background: blue;"></div>
+    <div class="item"
+         draggable="true"
+         ondragstart="dragStart(event)"
+         style="background: green;"></div>
+    <div class="item"
+         draggable="true"
+         ondragstart="dragStart(event)"
+         style="background: black;"></div>
+</div>
+<div style="clear:both"></div>
+<div class="drop-area"
+     ondragover="allowDrop(event)"
+     ondrop="drop(event)">
+</div>
+
+<canvas id="myCanvas" width="400" height="300"></canvas>
+</body>
+</html>

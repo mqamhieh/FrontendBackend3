@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700');
+
+body, html {
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.content {
+    width: 1180px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+h1 {
+    margin: 0;
+}
+
+.clearfix {
+    clear: both;
+}
+
+header .logo {
+    text-decoration: none;
+    display: inline-block;
+    background-image: url(images/logo.png);
+    height: 41px;
+    width: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: 50px;
+}
+
+.section.main .container {
+    background: url('images/background.jpg');
+    background-size: cover;
+}
+
+.section.main .main-text {
+    position: relative;
+    padding: 190px 0 270px;
+    color: #fff;
+    font-weight: 100;
+}
+
+.section.main .main-text .text {
+    float: left;
+    width: 55%;
+}
+
+.section.main .main-text .text h1 {
+    font-weight: 100;
+    text-transform: capitalize;
+    font-size: 34px;
+    margin-bottom: 20px;
+}
+
+.section.main .main-text .iphone-container {
+    float: left;
+    position: relative;
+    width: 45%;
+}
+
+.section.main .iphone {
+    cursor: pointer;
+    transition: transform 0.2s ease-out;
+    transform: scale(1);
+    background-image: url('images/iphone.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -540px;
+    height: 620px;
+    background-position: right;
+}
+
+.section.main .iphone:hover {
+    transform: scale(1.05);
+}
+
+.section.main .container {
+    position: relative;
+}
+
+.section.main .copyright {
+    position: absolute;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 100;
+    font-size: 12px;
+    width: 180px;
+    transform: rotate(-90deg);
+    left: -52px;
+    top: 50%;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.section.main .copyright span {
+    font-weight: 600;
+}
+
+.section h2.title {
+    font-weight: 100;
+    margin-top: 70px;
+    font-size: 32px;
+}
+
+.section.start .column {
+    float: left;
+    width: 50%;
+    padding-right: 34px;
+    font-size: 14px;
+    color: #959595;
+}
+
+.section.start .column.col-2 {
+    margin-top: 64px;
+}
+
+.section.boxes {
+    padding-top: 80px;
+}
+
+.section.boxes .box {
+    position: relative;
+    float: left;
+    width: 25%;
+    background: #f5989d;
+    height: 200px;
+    padding: 38px;
+    color: #fff;
+}
+
+.section.boxes .box .box-content {
+    position: relative;
+    z-index: 1;
+}
+
+.section.boxes .box .shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.2), transparent); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(top, rgba(0, 0, 0, 0.2), transparent); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.2), transparent); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.2), transparent); /* Standard syntax (must be last) */
+}
+
+.section.boxes .box .title {
+    font-weight: 100;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.section.boxes .box .text {
+    font-weight: 100;
+    font-size: 12px;
+    height: 80px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+.section.boxes .box .fa-heart-o {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.section.boxes .box a {
+    font-weight: 600;
+    font-size: 12px;
+    text-transform: capitalize;
+    color: #fff;
+    text-decoration: none;
+}
+
+.section.boxes .box.double-box {
+    width: 50%;
+}
+
+.section.boxes .box a i {
+    margin-left: 5px;
+}
+
+.section.boxes .box2 {
+    background: #615f7d;
+}
+
+.section.boxes .box4 {
+    background: #bd8cbf;
+}
+
+.section.boxes .box6 {
+    background: #82ca9c;
+}
+
+.section.boxes .box3,
+.section.boxes .box5,
+.section.boxes .box7 {
+    background-image: url('images/background.jpg');
+    background-size: cover;
+}
+
+.section.three .col {
+    float: left;
+    width: 25%;
+    padding-right: 25px;
+    font-weight: 100;
+    color: #959595;
+
+}
+
+.section.three .row {
+    margin-right: -25px;
+
+}
+
+.section.three h3 {
+    font-size: 14px;
+    font-weight: 600;
+
+}
+

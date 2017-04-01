@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="jquery.min.js"></script>
+
+    <script type="text/javascript">
+
+        var draggedElm;
+        var elmStart = { };
+        var mouseStart = {};
+
+        $(window).ready(function () {
+            $(".item").on("touchstart mousedown", function (event) {
+                if (!draggedElm) {
+                    draggedElm = $(this);
+                    draggedElm.addClass("being-dragged");
+
+                    mouseStart['x'] = event.pageX;
+                    mouseStart['y'] = event.pageY;
+
+                    elmStart['x'] = 0;
+                    elmStart['y'] = 0;
+
+                    draggedElm.css("position", "relative");
+                }
+            });
+
+            $(document).on("mousemove", function (event) {
+                if (draggedElm) {
+                    var mouseMoveX = event.pageX - mouseStart['x'];
+                    var mouseMoveY = event.pageY - mouseStart['y'];
+
+                    draggedElm.css({
+                        top: mouseMoveY,
+                        left: mouseMoveX
+                    });
+                }
+            });
+
+            $(document).on("mouseup", function (event) {
+                if (draggedElm) {
+                    var dropArea = $(".drop-area");
+
+                    var mouseX = event.pageX;
+                    var mouseY = event.pageY;
+
+                    var dropAreaTop = dropArea.offset().top;
+                    var dropAreaLeft = dropArea.offset().left;
+                    var dropAreaRight = dropAreaLeft + dropArea.width();
+                    var dropAreaBottom = dropAreaTop + dropArea.height();
+
+                    if (
+                        mouseY > dropAreaTop &&
+                        mouseY < dropAreaBottom &&
+                        mouseX > dropAreaLeft &&
+                        mouseX < dropAreaRight
+                    ) {
+                        // In drop area
+                        dropArea.append(draggedElm);
+                    }
+
+                    draggedElm.css({
+                        top: 0,
+                        left: 0
+                    });
+
+                    draggedElm.css("position", "static");
+                    draggedElm.removeClass("being-dragged");
+                    draggedElm = null;
+                }
+            });
+        });
+
+    </script>
+
+    <style>
+        .item {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background: red;
+            cursor: grab;
+            cursor: -moz-grab;
+            cursor: -webkit-grab;
+        }
+
+        .item.being-dragged {
+            opacity: 0.8;
+            z-index: 999;
+            cursor: grabbing;
+            cursor: -moz-grabbing;
+            cursor: -webkit-grabbing;
+        }
+
+        .drop-area {
+            display: inline-block;
+            width: 300px;
+            height: 50px;
+            background: grey;
+        }
+    </style>
+</head>
+<body>
+<div class="items">
+    <div class="item" style="background: red;"></div>
+    <div class="item" style="background: blue;"></div>
+    <div class="item" style="background: green;"></div>
+    <div class="item" style="background: black;"></div>
+</div>
+<div class="drop-area">
+
+</div>
+</body>
+</html>

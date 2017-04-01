@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="jquery.min.js"></script>
+    <script type="text/javascript">
+
+        var deleteCookie = function (key) {
+            setCookie(key, '', -1);
+        };
+
+        var getCookie = function (key) {
+            var cookies = document.cookie.split(";");
+
+            for (var i in cookies) {
+                var cookie = cookies[i].split("=");
+
+                if (cookie[0].trim() == key) {
+                    try {
+                        return JSON.parse(cookie[1]);
+                    }
+                    catch (e) {
+                        return cookie[1];
+                    }
+                }
+            }
+        };
+
+        var getItemFromLocalStorage = function (key) {
+            var item = localStorage.getItem(key);
+
+            try {
+                item = JSON.parse(item);
+                if (item.expiry >= Date.now()) {
+                    return item.value;
+                }
+                else {
+                    localStorage.removeItem(key);
+                }
+            }
+            catch (e) {
+            }
+
+            return null;
+        };
+
+        var saveItemInLocalStorage = function (key, value, expiry) {
+            var item = {
+                value: value,
+                expiry: Date.now() + expiry * 1000
+            };
+
+            localStorage.setItem(key, JSON.stringify(item));
+        };
+
+        // expiry: In Seconds
+        var setCookie = function (key, value, expiry) {
+            var cookieStr = key + "=" + JSON.stringify(value) + ";";
+
+            if (expiry) {
+                var expirationDateInMillis = Date.now() + expiry * 1000;
+                var expirationDate = new Date(expirationDateInMillis);
+                cookieStr += "expires=" + expirationDate.toUTCString() + ";";
+            }
+
+            document.cookie = cookieStr;
+        };
+
+        var saveCookie = function () {
+            var name = $("[name='name']").val();
+            setCookie("name", name, 60 * 60);
+        };
+
+        $(document).ready(function () {
+            $("#my_cookie").text(getCookie('name'));
+        });
+
+    </script>
+
+</head>
+<body>
+ <div>
+     <input type="text" name="name" />
+     <button onclick="saveCookie()">Save</button>
+     <div id="my_cookie"></div>
+ </div>
+</body>
+</html>
