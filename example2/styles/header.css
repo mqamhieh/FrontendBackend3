@@ -91,3 +91,62 @@ header .cart .cart_items_count {
     text-align: center;
     font-size: 1.1em;
 }
+
+.sub_header {
+    border-bottom: 1px solid #f0f2f7;
+}
+
+.sub_header .sub_menu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sub_header .sub_menu li {
+    float: left;
+}
+
+.sub_header a {
+    text-decoration: none;
+    display: inline-block;
+    color: #b9bed1;
+    text-transform: uppercase;
+    padding: 16px 25px 16px 0;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.sub_header .search input {
+    padding: 16px 8px 16px 35px;
+    border: none;
+    border-left: 1px solid #f0f2f7;
+    border-right: 1px solid #f0f2f7;
+    font-family: inherit;
+    float: left;
+    width: 100%;
+}
+
+.sub_header .search input::-webkit-input-placeholder,
+.sub_header .search input::-moz-placeholder,
+.sub_header .search input:-ms-input-placeholder
+{
+    color: #b9bed1;
+    font-weight: 700;
+    font-family: inherit;
+}
+
+.sub_header .search {
+    position: relative;
+    width: 220px;
+}
+
+.sub_header .search i {
+    position: absolute;
+    left: 15px;
+    top: 16px;
+}
+
+.sub_header .support {
+    margin-right: 10px;
+}

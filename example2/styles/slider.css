@@ -1,0 +1,115 @@
+.slider {
+    background: #1c1e23;
+}
+
+.slider .slide {
+    height: 370px;
+}
+
+.slider .slide .text {
+    width: 60%;
+    color: #fff;
+    padding: 70px 10% 0;
+}
+
+.slider .slide .text h1 {
+    font-size: 34px;
+    margin: 0;
+}
+
+.slider .slide .text p {
+    font-size: 12px;
+    width: 75%;
+    line-height: 18px;
+    height: 96px;
+}
+
+.slider .slide .text a {
+    display: inline-block;
+    background: #2754eb;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 11px;
+    padding: 10px 18px;
+    text-align: center;
+    border-radius: 19px;
+    width: 135px;
+    text-decoration: none;
+}
+
+.slider .slide .image_wrapper {
+    width: 18%;
+    height: 100%;
+}
+
+.slider .slide .image {
+    background-image: url(../images/iphone.png);
+    background-size: cover;
+    height: 100%;
+    background-position: center -62px;
+    background-repeat: no-repeat;
+}
+
+.slider .slick-arrow {
+    position: absolute;
+    color: #fff;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    width: 42px;
+    height: 42px;
+    text-align: center;
+    font-size: 15px;
+    padding-top: 12px;
+    z-index: 1;
+}
+
+.slider .slick-arrow.slick-disabled {
+    display: none !important;
+}
+
+.slider .slick-arrow.slick-prev {
+    left: 30px;
+    padding-right: 1px;
+}
+
+.slider .slick-arrow.slick-next {
+    right: 30px;
+    padding-left: 2px;
+}
+
+.slider .slick-dots {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    right: 0;
+    bottom: 30px;
+    text-align: center;
+}
+
+.slider .slick-dots li {
+    display: inline-block;
+}
+
+.slider .slick-dots li button {
+    font-size: 0;
+    border: 2px solid white;
+    border-radius: 50%;
+    padding: 0;
+    background: none;
+    height: 8px;
+    width: 8px;
+    margin: 0 5px;
+}
+
+.slider .slick-dots li.slick-active button {
+    background: white;
+}
+
+.slider .slick-slide {
+    outline: none !important;
+}
