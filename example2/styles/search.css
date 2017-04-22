@@ -1,0 +1,86 @@
+.search .breadcrumb {
+    background: #fff;
+    border-radius: 5px;
+    margin-top: 40px;
+    margin-bottom: 25px;
+}
+
+.search .breadcrumb .items-group {
+    padding: 15px 28px;
+    border-left: 2px solid #f2f2f2;
+    height: 58px;
+}
+
+.search .breadcrumb .items-group:first-child {
+    border-left: none;
+}
+
+.search .breadcrumb .item {
+    padding-left: 32px;
+}
+
+.search .breadcrumb .item:first-child {
+    padding-left: 0;
+}
+
+.search .breadcrumb label:not(.checkbox) {
+    color: #a1a8bd;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+    margin-right: 18px;
+    display: inline-block;
+}
+
+.search .breadcrumb select {
+    border: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #343e5c;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding: 7px 30px 7px 10px;
+    width: 122px;
+    font-size: 12px;
+}
+
+.search .breadcrumb select option {
+    text-transform: none;
+}
+
+.search .breadcrumb select::-ms-expand {
+    display: none;
+}
+
+.search .breadcrumb .select_wrapper {
+    position: relative;
+}
+
+.search .breadcrumb .select_wrapper i {
+    position: absolute;
+    top: 0;
+    right: 4px;
+    color: #c2c5ce;
+}
+
+.search .breadcrumb input[type='text'] {
+    width: 150px;
+}
+
+.search .breadcrumb input[type='number'] {
+    width: 65px;
+}
+
+.search .breadcrumb input[type='number'],
+.search .breadcrumb input[type='text'] {
+    background: #f0f2f7;
+    border: 1px solid #e3e8f0;
+    border-radius: 20px;
+    padding: 5px 10px;
+}
+
+.search .breadcrumb input[type='number']:focus,
+.search .breadcrumb input[type='text']:focus {
+    outline: none;
+    border-color: #3cb3e2;
+}

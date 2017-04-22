@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="styles/main.css" type="text/css" />
     <link rel="stylesheet" href="styles/header.css" type="text/css" />
     <link rel="stylesheet" href="styles/slider.css" type="text/css" />
+    <link rel="stylesheet" href="styles/search.css" type="text/css" />
 
 </head>
 <body>
@@ -144,7 +145,58 @@
         </div>
     </div>
 
+    <div class="main_container search">
+        <div class="content">
+            <div class="breadcrumb">
+                <div class="items-group pull-left">
+                    <label>Sort By:</label>
+                    <span class="select_wrapper">
+                        <select>
+                            <option value="BEST_MATCH">Best Match</option>
+                            <option value="BEST_PRICE">Best Price</option>
+                        </select>
+                        <i class="fa fa-chevron-down"></i>
+                    </span>
+                </div>
+
+                <div class="items-group pull-left">
+                    <div class="item pull-left">
+                        <label>Keywords</label>
+                        <input type="text" placeholder="Tablet" />
+                    </div>
+                    <div class="item pull-left">
+                        <label>Price</label>
+                        <input type="number" value="10" min="0" />
+                        -
+                        <input type="number" value="1000" min="0" />
+                    </div>
+                    <div class="item pull-left">
+                        <label class="checkbox">
+                            <i class="fa circle fa-circle"></i>
+                            <i class="fa check fa-check"></i>
+                            Free Shipping
+                            <input type="checkbox" />
+                        </label>
+                    </div>
+                </div>
+
+                <div class="items-group pull-right">
+                    <label>Ship To:</label>
+                    <span class="select_wrapper">
+                        <select>
+                            <option value="US">USA</option>
+                            <option value="UK">United Kingdom</option>
+                        </select>
+                        <i class="fa fa-chevron-down"></i>
+                    </span>
+                </div>
+
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+
     <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
-    <!-- <link href="https://fonts.googleapis.com/css?family=Montserrat:100,400,600,700" rel="stylesheet"> -->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Montserrat:100,400,600,700" rel="stylesheet">-->
 </body>
 </html>

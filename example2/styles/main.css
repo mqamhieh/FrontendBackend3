@@ -3,6 +3,7 @@ body, html {
     padding: 0;
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
+    background: #e4e5e7;
 }
 
 * {
@@ -25,4 +26,49 @@ body, html {
 
 .pull-right {
     float: right;
+}
+
+label.checkbox {
+    position: relative;
+    text-transform: none;
+    padding-left: 30px;
+    color: #343e5c;
+    line-height: 26px;
+    vertical-align: middle;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.checkbox i {
+    font-size: 26px;
+}
+
+.checkbox .circle {
+    position: absolute;
+    left: 0;
+    top: -5px;
+    transition: all 0.3s, ease-in;
+    color: #f0f2f7;
+}
+
+.checkbox .check {
+    position: absolute;
+    font-size: 16px;
+    top: 0;
+    left: 3px;
+    display: none;
+    color: #fff;
+}
+
+.checkbox.checked .circle {
+    color: #00e2aa;
+}
+
+.checkbox.checked .check {
+    display: inline-block;
+}
+
+.checkbox input[type='checkbox'] {
+    opacity: 0;
+    position: absolute;
 }

@@ -9,4 +9,13 @@ $(document).ready(function() {
         prevArrow: "<i class='fa fa-chevron-left slick-prev'></i>",
         nextArrow: "<i class='fa fa-chevron-right slick-next'></i>",
     });
+
+    $(".checkbox input[type='checkbox']").on('change', function () {
+        if ($(this).is(":checked")) {
+            $(this).parents(".checkbox").addClass("checked");
+        }
+        else {
+            $(this).parents(".checkbox").removeClass("checked");
+        }
+    });
 });
