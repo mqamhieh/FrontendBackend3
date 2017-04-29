@@ -153,3 +153,35 @@ header .cart .cart_items_count {
 .sub_header .support {
     margin-right: 10px;
 }
+
+@media screen and (max-width: 1023px) {
+    header .menu {
+        display: none;
+    }
+
+    .sub_header .search {
+        width: 190px;
+    }
+
+    .sub_header a {
+        padding-left: 9px;
+        padding-right: 9px;
+    }
+
+    header .side_menu {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .sub_header .sub_menu {
+        display: none;
+    }
+
+    header .user-actions {
+        width: 100%;
+        text-align: center;
+        padding: 13px 0;
+        border-top: 1px solid #f0f2f7;
+    }
+}

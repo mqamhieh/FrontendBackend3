@@ -1,0 +1,63 @@
+.best-sellers .section {
+    background: #fff;
+    border-radius: 5px;
+}
+
+.best-sellers .title {
+    text-align: center;
+    color: #343e5c;
+    font-weight: 600;
+    font-size: 12px;
+    padding: 15px 0;
+    text-transform: uppercase;
+    border-bottom: 1px solid #f0f2f7;
+}
+
+.best-sellers .item {
+    float: left;
+    width: 25%;
+    border-right: 1px solid #f0f2f7;
+    text-align: center;
+}
+
+.best-sellers .item .image {
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 80%;
+    margin: 20px auto;
+    height: 160px;
+}
+
+
+.best-sellers .item .name {
+    color: #343e5c;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.best-sellers .item .desc {
+    color: #a1a8bd;
+    font-size: 12px;
+    text-transform: uppercase;
+    padding-top: 10px;
+}
+
+.best-sellers .item .price {
+    padding: 15px;
+}
+
+.best-sellers .item .price span {
+    display: inline-block;
+    padding: 0 10px;
+}
+
+.best-sellers .item .price .new {
+    color: #343e5c;
+    font-weight: 600;
+}
+
+.best-sellers .item .price .old {
+    text-decoration: line-through;
+    color: #a1a8bd;
+}

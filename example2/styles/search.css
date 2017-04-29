@@ -84,3 +84,27 @@
     outline: none;
     border-color: #3cb3e2;
 }
+
+@media screen and (max-width: 1279px) {
+    .search .breadcrumb .items-group {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .search .breadcrumb .items-group {
+        height: auto;
+        padding: 0 16px;
+    }
+
+    .search .breadcrumb {
+        padding: 10px 0;
+        margin: 12px 0;
+    }
+
+    .search .breadcrumb .item {
+        height: auto;
+        width: 100%;
+        padding: 10px 0;
+    }
+}
