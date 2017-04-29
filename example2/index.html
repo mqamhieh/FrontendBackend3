@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="styles/slider.css" type="text/css" />
     <link rel="stylesheet" href="styles/search.css" type="text/css" />
     <link rel="stylesheet" href="styles/search_results.css" type="text/css" />
+    <link rel="stylesheet" href="styles/side_bar.css" type="text/css" />
 
 </head>
 <body>
@@ -200,74 +201,164 @@
     <div class="main_container search-results">
         <div class="content">
             <div class="side_bar pull-left">
-                <div class="accordion">
-                    <div class="title">
-                        Top Sales
-                        <i class="fa open-arrow fa-chevron-right"></i>
+                <div class="accordions">
+                    <div class="accordion">
+                        <div class="title">
+                            Top Sales
+                            <i class="fa open-arrow fa-chevron-right"></i>
+                        </div>
+                        <div class="body">
+                            <ul>
+                                <li><a href="#">Cell Phones</a></li>
+                                <li><a href="#">Cameras</a></li>
+                                <li><a href="#">Computers</a></li>
+                                <li><a href="#">TV Audio</a></li>
+                                <li><a href="#">Video Games</a></li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="body">
-                        <ul>
-                            <li><a href="#">Cell Phones</a></li>
-                            <li><a href="#">Cameras</a></li>
-                            <li><a href="#">Computers</a></li>
-                            <li><a href="#">TV Audio</a></li>
-                            <li><a href="#">Video Games</a></li>
-                        </ul>
+                    <div class="accordion">
+                        <div class="title">
+                            Top Sales
+                            <i class="fa open-arrow fa-chevron-right"></i>
+                        </div>
+                        <div class="body">
+                            <ul>
+                                <li><a href="#">Video Games</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion">
+                        <div class="title">
+                            Top Sales
+                            <i class="fa open-arrow fa-chevron-right"></i>
+                        </div>
+                        <div class="body">
+                            <ul>
+                                <li><a href="#">Cell Phones</a></li>
+                                <li><a href="#">Cameras</a></li>
+                                <li><a href="#">Computers</a></li>
+                                <li><a href="#">TV Audio</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion">
+                        <div class="title">
+                            Top Sales
+                            <i class="fa open-arrow fa-chevron-right"></i>
+                        </div>
+                        <div class="body">
+                            <ul>
+                                <li><a href="#">Cell Phones</a></li>
+                                <li><a href="#">Cameras</a></li>
+                                <li><a href="#">Computers</a></li>
+                                <li><a href="#">TV Audio</a></li>
+                                <li><a href="#">Video Games</a></li>
+                                <li><a href="#">Cameras</a></li>
+                                <li><a href="#">Computers</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion">
+                        <div class="title">
+                            Top Sales
+                            <i class="fa open-arrow fa-chevron-right"></i>
+                        </div>
+                        <div class="body">
+                            <ul>
+                                <li><a href="#">Cell Phones</a></li>
+                                <li><a href="#">TV Audio</a></li>
+                                <li><a href="#">Video Games</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-                <div class="accordion">
-                    <div class="title">
-                        Top Sales
-                        <i class="fa open-arrow fa-chevron-right"></i>
+
+                <div class="block">
+                    <div class="block-section">
+                        <div class="title">Available</div>
+                        <div class="body"></div>
                     </div>
-                    <div class="body">
-                        <ul>
-                            <li><a href="#">Video Games</a></li>
-                        </ul>
+                    <div class="block-section">
+                        <div class="title">Brands <a href="javascript:"
+                                                     onclick="checkAll(event)">All</a></div>
+
+                        <div class="body">
+                            <label class="checkbox">
+                                <i class="fa circle fa-square"></i>
+                                <i class="fa check fa-check"></i>
+                                Apple
+                                <span class="count">32</span>
+                                <input type="checkbox"/>
+                            </label>
+                            <label class="checkbox">
+                                <i class="fa circle fa-square"></i>
+                                <i class="fa check fa-check"></i>
+                                JBL
+                                <span class="count">32</span>
+                                <input type="checkbox"/>
+                            </label>
+                            <label class="checkbox">
+                                <i class="fa circle fa-square"></i>
+                                <i class="fa check fa-check"></i>
+                                Bose
+                                <span class="count">32</span>
+                                <input type="checkbox"/>
+                            </label>
+                            <label class="checkbox">
+                                <i class="fa circle fa-square"></i>
+                                <i class="fa check fa-check"></i>
+                                Nest
+                                <span class="count">32</span>
+                                <input type="checkbox"/>
+                            </label>
+                        </div>
                     </div>
                 </div>
-                <div class="accordion">
-                    <div class="title">
-                        Top Sales
-                        <i class="fa open-arrow fa-chevron-right"></i>
+                <div class="block">
+                    <div class="block-section">
+                        <div class="title">Condition <a href="javascript:"
+                                                        onclick="checkAll(event)">See All</a></div>
+                        <div class="body">
+                        <label class="checkbox">
+                            <i class="fa circle fa-square"></i>
+                            <i class="fa check fa-check"></i>
+                            New
+                            <input type="checkbox"/>
+                        </label>
+                        <label class="checkbox">
+                            <i class="fa circle fa-square"></i>
+                            <i class="fa check fa-check"></i>
+                            Manufacturer Refurbished
+                            <input type="checkbox"/>
+                        </label>
+                        <label class="checkbox">
+                            <i class="fa circle fa-square"></i>
+                            <i class="fa check fa-check"></i>
+                            Seller Refurbished
+                            <input type="checkbox"/>
+                        </label>
+                        <label class="checkbox">
+                            <i class="fa circle fa-square"></i>
+                            <i class="fa check fa-check"></i>
+                            Used
+                            <input type="checkbox"/>
+                        </label>
+                        <label class="checkbox">
+                            <i class="fa circle fa-square"></i>
+                            <i class="fa check fa-check"></i>
+                            For Parts or Not Working
+                            <input type="checkbox"/>
+                        </label>
                     </div>
-                    <div class="body">
-                        <ul>
-                            <li><a href="#">Cell Phones</a></li>
-                            <li><a href="#">Cameras</a></li>
-                            <li><a href="#">Computers</a></li>
-                            <li><a href="#">TV Audio</a></li>
-                        </ul>
+
                     </div>
                 </div>
-                <div class="accordion">
-                    <div class="title">
-                        Top Sales
-                        <i class="fa open-arrow fa-chevron-right"></i>
-                    </div>
-                    <div class="body">
-                        <ul>
-                            <li><a href="#">Cell Phones</a></li>
-                            <li><a href="#">Cameras</a></li>
-                            <li><a href="#">Computers</a></li>
-                            <li><a href="#">TV Audio</a></li>
-                            <li><a href="#">Video Games</a></li>
-                            <li><a href="#">Cameras</a></li>
-                            <li><a href="#">Computers</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="accordion">
-                    <div class="title">
-                        Top Sales
-                        <i class="fa open-arrow fa-chevron-right"></i>
-                    </div>
-                    <div class="body">
-                        <ul>
-                            <li><a href="#">Cell Phones</a></li>
-                            <li><a href="#">TV Audio</a></li>
-                            <li><a href="#">Video Games</a></li>
-                        </ul>
+
+                <div class="block">
+                    <div class="block-section">
+                        <div class="title">Delivery Options</div>
+                        <div class="body"></div>
                     </div>
                 </div>
             </div>

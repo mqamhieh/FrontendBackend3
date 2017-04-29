@@ -85,6 +85,12 @@
     border-radius: 5px;
     height: 327px;
     position: relative;
+    transform: scale(1);
+    transition: all 0.1s ease-in;
+}
+
+.search_results .item-content:hover {
+    transform: scale(1.05);
 }
 
 .search_results .item .image {

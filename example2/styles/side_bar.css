@@ -1,0 +1,50 @@
+.side_bar .block {
+    background: #fff;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.side_bar .block .title {
+    text-transform: uppercase;
+    color: #343e5c;
+    padding: 12px 15px;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #f0f2f7;
+    position: relative;
+}
+
+.side_bar .block .title a {
+    position: absolute;
+    right: 18px;
+    top: 12px;
+    color: #2754eb;
+}
+
+.side_bar .block .body {
+    padding: 15px;
+}
+
+.side_bar .block .body .checkbox {
+    display: block;
+    position: relative;
+    padding-bottom: 8px;
+}
+
+.side_bar .block .body .checkbox .circle {
+    top: 0;
+}
+
+.side_bar .block .body .checkbox .check {
+    top: 6px;
+    left: 4px;
+    font-size: 14px;
+}
+
+.side_bar .block .body .checkbox .count {
+    position: absolute;
+    right: 0;
+    color: #b8bfd3;
+    font-size: 12px;
+}

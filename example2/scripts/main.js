@@ -35,3 +35,9 @@ $(document).ready(function() {
 
     });
 });
+
+var checkAll = function (event) {
+    $(event.target)
+        .parents(".block-section")
+        .find("input[type='checkbox']:not(:checked)").click();
+};
