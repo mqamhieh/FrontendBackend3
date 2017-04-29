@@ -70,11 +70,104 @@
 }
 
 .search-results .search_results .item {
-    float: left;
     padding: 0 10px;
     width: 25%;
+    text-align: center;
+    margin-bottom: 20px;
 }
-.search-results .search_results .item div {
-    height: 180px;
-    background: red;
+
+.search-results .search_results .item.double {
+    width: 50%;
+}
+
+.search_results .item-content {
+    background: #fff;
+    border-radius: 5px;
+    height: 327px;
+    position: relative;
+}
+
+.search_results .item .image {
+    height: 230px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 75%;
+    margin: 0 auto;
+}
+
+.search_results .item .name {
+    color: #1c1e23;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.search_results .item .desc {
+    color: #b8bfd3;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-top: 10px;
+    font-size: 13px;
+}
+
+.search_results .item .price {
+    color: #343e5c;
+    font-weight: 600;
+    padding: 8px 0 30px;
+}
+
+.search_results .item.double .image {
+    width: 100%;
+    background-size: cover;
+    height: 260px;
+}
+
+.search_results .item.double .details {
+    float: left;
+    width: 50%;
+    text-align: left;
+    padding: 14px 20px;
+}
+
+.search_results .item.double .desc {
+    margin-top: 5px;
+}
+
+.search_results .item .actions {
+    float: right;
+    padding: 13px 20px;
+    width: 50%;
+}
+
+.search_results .item .actions a {
+    float: right;
+    border: 2px solid #f0f2f7;
+    text-transform: uppercase;
+    text-decoration: none;
+    width: 50%;
+    color: #3a405b;
+    padding: 10px 0;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 12px;
+}
+
+.search_results .item .actions a:first-child {
+    border-left: none;
+    border-radius: 0 20px 20px 0;
+}
+
+.search_results .item .actions a:last-child {
+    border-radius: 20px 0 0 20px;
+}
+
+.search_results .item.double .price {
+    position: absolute;
+    top: 11px;
+    left: 11px;
+    background: #1c1e23;
+    color: #fff;
+    border-radius: 3px;
+    padding: 3px 8px;
+    font-weight: 400;
 }
