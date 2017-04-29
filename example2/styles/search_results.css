@@ -1,0 +1,80 @@
+.search-results .side_bar {
+    width: 25%;
+    padding-right: 25px;
+}
+
+.search-results .accordion .title {
+    background: #fff;
+    color: #343e5c;
+    padding: 11px 18px;
+    border-bottom: 1px solid #f0f2f7;
+    position: relative;
+    font-weight: 700;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.search-results .accordion:first-child .title {
+    border-radius: 5px 5px 0 0;
+}
+
+.search-results .accordion:last-child .title {
+    border-radius: 0 0 5px 5px;
+    border-bottom: none;
+}
+
+.search-results .accordion .title i {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    margin-top: -6px;
+    color: #b8bfd3;
+    transform: rotate(0deg);
+    transition: transform 0.3s, ease-in;
+    font-weight: normal;
+    font-size: 12px;
+}
+
+.search-results .accordion.open .title i {
+    transform: rotate(90deg);
+}
+
+.search-results .accordion ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.search-results .accordion ul li a {
+    display: block;
+    background: #f0f2f7;
+    color: #a1a8bd;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 11px;
+    padding: 12px 18px;
+    border-bottom: 1px solid #dfe4ee;
+    font-weight: 600;
+}
+
+.search-results .accordion .body {
+    display: none;
+}
+
+.search-results .search_results {
+    width: 75%;
+}
+
+.search-results .search_results .items {
+    margin: 0 -10px;
+}
+
+.search-results .search_results .item {
+    float: left;
+    padding: 0 10px;
+    width: 25%;
+}
+.search-results .search_results .item div {
+    height: 180px;
+    background: red;
+}
