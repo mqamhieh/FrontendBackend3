@@ -41,6 +41,30 @@ $(document).ready(function() {
         ]
     });
 
+    $(".customers ul").slick({
+        infinite: true,
+        slidesToShow: 3,
+        dots: false,
+        prevArrow: "<i class='fa fa-chevron-left slick-prev'></i>",
+        nextArrow: "<i class='fa fa-chevron-right slick-next'></i>",
+        responsive: [
+            {
+                breakpoint: 769,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    });
+
     $(".checkbox input[type='checkbox']").on('change', function () {
         if ($(this).is(":checked")) {
             $(this).parents(".checkbox").addClass("checked");

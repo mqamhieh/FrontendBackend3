@@ -1,0 +1,91 @@
+.customers {
+    background: #fff;
+    margin-top: 20px;
+}
+
+.customers h1 {
+    text-align: center;
+    margin: 0;
+    padding: 60px 0 10px;
+}
+
+.customers h2 {
+    color: #b9bed1;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 0;
+}
+
+.customers ul {
+    float: left;
+    width: 100%;
+    list-style: none;
+    padding: 40px 60px 60px;
+    margin: 0;
+}
+
+.customers ul li {
+    float: left;
+    width: 33.33%;
+    padding: 0 50px;
+}
+
+.customers .customer .image {
+    float: left;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+}
+
+.customers .customer .info {
+    float: left;
+    width: calc(100% - 42px);
+    padding: 3px 10px 0;
+}
+
+.customers .customer .name {
+    font-weight: 600;
+    color: #3a405b;
+    font-size: 15px;
+}
+
+.customers .customer .position {
+    color: #b9bed1;
+    font-style: italic;
+    font-size: 13px;
+    margin-top: 2px;
+}
+
+.customers .customer .text {
+    float: left;
+    width: 100%;
+    color: #3a405b;
+    line-height: 25px;
+    margin-top: 20px;
+}
+
+.customers .slick-arrow {
+    display: none !important;
+}
+
+
+@media screen and (max-width: 600px) {
+    .customers ul {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .customers h1 {
+        padding: 32px 10px 10px;
+        font-size: 24px;
+    }
+
+    .customers h2 {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
